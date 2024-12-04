@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Actividades</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #FFC107;
+            margin-bottom: 30px;
+        }
+        .filter-section {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .filter-section label {
+            font-weight: bold;
+            color: #333;
+        }
+        .filter-section input, .filter-section select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            width: 150px;
+            font-size: 14px;
+        }
+        .filter-section button {
+            background-color: #FFC107;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .filter-section button:hover {
+            background-color: #E0A800;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background-color: #FFC107;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #fef7e0;
+        }
+        tr:hover {
+            background-color: #fff3cd;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #FFC107;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .home-button:hover {
+            background-color: #E0A800;
+            transform: scale(1.1);
+        }
+        .home-button i {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Título -->
+    <h1>Inscripciones Admisión 2025 - I</h1>
+
+    <!-- Botón de Home -->
+    <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i>
+    </a>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>CARRERAS</th>
+                    <th>MAÑANA</th>
+                    <th>NOCHE</th>
+                    <th>SÁBADO</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Inicial</td>
+                    <td>6</td>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>Primaria</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>CCSS</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>8</strong></td>
+                    <td><strong>14</strong></td>
+                    <td><strong>5</strong></td>
+                    <td><strong>27</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para cargar íconos de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
