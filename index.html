@@ -21,6 +21,46 @@
         transform: translateY(0);
       }
     }
+
+ /* robot IA */
+
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .robot {
+      width: 400px;
+      height: auto;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+    /* FINAL ROBOT */
+
+
+    
   </style>
 </head>
 <body class="bg-blue-900 text-white font-sans">
@@ -69,7 +109,31 @@
       <a href="ModalidadEstudiante.html" class="px-6 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg hover:bg-purple-500 transition ml-4">Estudiante</a>
       <a href="admision.html" class="px-6 py-3 bg-yellow-600 text-white rounded-full font-bold shadow-lg hover:bg-yellow-500 transition">Admisión</a>
 
-      <a href="worker.html" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-500 transition">Trabajadores</a>
+      <!----------------------------------------------------------------------------------------------->
+<!--      <a href="worker.html" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-500 transition">Trabajadores</a> -->
+
+<a href="#" class="px-6 py-3 bg-blue-600 text-white rounded-full font-bold shadow-lg hover:bg-blue-500 transition" onclick="showLoadingScreen(event)">Trabajadores</a>
+
+<div class="loading-screen hidden" id="loadingScreen">
+  <img src="IArobot.gif" alt="Robot animado" class="robot">
+  <p class="loading-text">LA IA esta generando datos, esto puede tardar algunos segundos...</p>
+</div>
+
+<script>
+  function showLoadingScreen(event) {
+    event.preventDefault(); // Evita que el enlace redirija inmediatamente
+    const loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.classList.remove('hidden');
+
+    // Simula un retraso antes de redirigir
+    setTimeout(() => {
+      window.location.href = 'worker.html';
+    }, 6000); // 3 segundos
+  }
+</script>
+
+      <!----------------------------------------------------------------------------------------------->
+
 
     </nav>
 
