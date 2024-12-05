@@ -16,39 +16,26 @@
             color: #FFC107;
             margin-bottom: 30px;
         }
-        .filter-section {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 15px;
-            align-items: center;
+        .progress-container {
+            margin-bottom: 20px;
         }
-        .filter-section label {
-            font-weight: bold;
-            color: #333;
-        }
-        .filter-section input, .filter-section select {
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            outline: none;
-            width: 150px;
-            font-size: 14px;
-        }
-        .filter-section button {
+        .progress-bar {
+            height: 20px;
             background-color: #FFC107;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
             border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: background-color 0.3s;
+            width: 0%;
+            transition: width 0.3s;
         }
-        .filter-section button:hover {
-            background-color: #E0A800;
+        .progress {
+            background-color: #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .progress-label {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         table {
             width: 100%;
@@ -110,6 +97,14 @@
         <i class="fas fa-home"></i>
     </a>
 
+    <!-- Barra de progreso -->
+    <div class="progress-container">
+        <div class="progress-label">Progreso de la Meta: <span id="progress-text">0%</span></div>
+        <div class="progress" id="progress-bar">
+            <div class="progress-bar" id="progress-fill"></div>
+        </div>
+    </div>
+
     <div class="table-container">
         <table>
             <thead>
@@ -156,5 +151,19 @@
 
     <!-- Script para cargar íconos de Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Script para inicializar la barra de progreso desde el backend -->
+    <script>
+        // Simulación de porcentaje recibido desde el backend
+        const porcentajeMeta = 75; // Cambia este valor desde el backend
+
+        // Actualización de la barra de progreso
+        const progressBar = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+
+        progressBar.style.width = porcentajeMeta + '%';
+        progressText.textContent = porcentajeMeta + '%';
+    </script>
 </body>
 </html>
+
