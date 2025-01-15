@@ -71,21 +71,21 @@
       <!-- Capacidad de la Red -->
       <div class="bg-white text-center p-6 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold text-gray-700">Alumnos Activos</h2>
-        <p class="text-3xl font-extrabold text-blue-500">855</p>
+        <p class="text-3xl font-extrabold text-blue-500">850</p>
         <p class="text-sm text-gray-500">total</p>
       </div>
 
       <!-- Latencia Promedio -->
       <div class="bg-white text-center p-6 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold text-gray-700">Presencial</h2>
-        <p class="text-3xl font-extrabold text-green-500">19</p>
+        <p class="text-3xl font-extrabold text-green-500">18</p>
         <p class="text-sm text-gray-500">sede principal</p>
       </div>
 
       <!-- Pérdida de Paquetes -->
       <div class="bg-white text-center p-6 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold text-gray-700">Semipresencial</h2>
-        <p class="text-3xl font-extrabold text-red-500">321</p>
+        <p class="text-3xl font-extrabold text-red-500">317</p>
         <p class="text-sm text-gray-500">plataforma / sede</p>
       </div>
 
@@ -168,7 +168,7 @@
     const dataCapacity = {
       labels: ['Activos', 'Inactivos'],
       datasets: [{
-        data: [855, 68],
+        data: [850, 70],
         backgroundColor: ['#4ade80', '#ef4444'],
       }]
     };
@@ -186,7 +186,7 @@
     const dataPacketLoss = {
       labels: ['Presencial', 'Semipresencial','Remoto'],
       datasets: [{
-        data: [19, 321,515],
+        data: [18, 317, 515],
         backgroundColor: ['#4ade80', '#FFC107', '#007BFF'],
       }]
     };
@@ -194,7 +194,7 @@
     const dataAvailability = {
       labels: ['Al dia', 'deben','becados'],
       datasets: [{
-        data: [677, 170, 8],
+        data: [718, 124, 8],
         backgroundColor: ['#4ade80', '#ef4444', 'skyblue'],
       }]
     };
@@ -202,7 +202,7 @@
     const dataEquipment = {
       labels: ['Licencia', 'Retirados'],
       datasets: [{
-        data: [48, 20],
+        data: [50, 20],
         backgroundColor: ['#FFC107', '#ef4444'],
       }]
     };
